@@ -1,0 +1,17 @@
+/* 화면 전체 크기 설정 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* 키오스크 뷰 크기 고정 */
+.kiosk {
+  width: 480px;
+  height: 800px;
+  margin: 0 auto; /* 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+}
