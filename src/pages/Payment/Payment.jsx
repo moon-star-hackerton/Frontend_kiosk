@@ -11,6 +11,7 @@ function Payment() {
     location.state?.serverResponse || "No message received"; // 서버 응답을 상태로 설정
 
   useEffect(() => {
+    const controller = new AbortController();
     // WebSocket 연결 설정
     ws.current = new WebSocket("ws://192.168.35.6:8050");
 

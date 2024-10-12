@@ -6,6 +6,8 @@ function WebSocketComponent() {
   const [audioChunks, setAudioChunks] = useState([]); // 녹음된 오디오 조각들 저장
 
   useEffect(() => {
+    const controller = new AbortController();
+
     // 1. WebSocket 서버와 연결
     const ws = new WebSocket("ws://192.168.35.6:8050");
 
@@ -38,9 +40,7 @@ function WebSocketComponent() {
     };
 
     // 컴포넌트 언마운트 시 WebSocket 연결 닫기
-    return () => {
-      ws.close();
-    };
+    return () => controller.abort();
   }, []);
 
   // 음성 녹음 시작 함수
