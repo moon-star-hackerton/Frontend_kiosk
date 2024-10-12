@@ -5,6 +5,7 @@ import Payment from "./pages/Payment/Payment";
 import PaymentComplete from "./pages/PaymentComplet/PaymentComplet";
 import BurgerRecom from "./pages/BurgerRecom/BurgerRecom";
 import BurgerChoose from "./pages/BurgerChoose/BurgerChoose";
+import WebSocketComponent from "./components/WebSocketComponent/WebSocketComponent"; // WebSocket 컴포넌트 추가
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
         <Route path="/paymentComplete" element={<PaymentComplete />} />
         <Route path="/burgerrecom" element={<BurgerRecom />} />
         <Route path="/burgerchoose" element={<BurgerChoose />} />
+        <Route path="/websocket" element={<WebSocketComponent />} /> {/* WebSocket 컴포넌트 경로 추가 */}
       </Routes>
     </BrowserRouter>
   );
