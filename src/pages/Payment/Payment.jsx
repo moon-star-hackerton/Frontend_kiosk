@@ -22,8 +22,10 @@ function Payment() {
     ws.current.onmessage = (event) => {
       console.log("Message from server:", event.data);
       if (event.data === "CARD:PASS") {
+
         // CARD:PASS 메시지가 오면 PaymentComplete 페이지로 이동
         navigate("/paymentComplete");
+        console.log("card pass")
       }
     };
 

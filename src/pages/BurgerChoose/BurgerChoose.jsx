@@ -74,7 +74,7 @@ function BurgerChoose() {
     if (mediaRecorderRef.current) {
       mediaRecorderRef.current.stop();
       mediaRecorderRef.current.onstop = () => {
-        const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
+        const audioBlob = new Blob(audioChunks, { type: "wav" });
         sendAudioToServer(audioBlob); // 녹음 파일 전송
         console.log("Recording stopped");
       };
