@@ -45,3 +45,12 @@ export const arrow2 = styled.img`
   margin-top: 21px;
   position: absolute;
 `;
+
+export const dumi = styled.img`
+  position: absolute;
+  margin-top: 140px;
+  margin-left: 30px;
+  text-align: center;
+  width: 429px;
+  height: 195px;
+`;
