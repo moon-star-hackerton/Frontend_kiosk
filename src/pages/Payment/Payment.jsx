@@ -19,13 +19,16 @@ function Payment() {
       console.log("WebSocket connected");
     };
 
+    const timer = setTimeout(() => {
+      navigate("/paymentcomplete"); // 10초 후 BurgerRecom 페이지로 이동
+    }, 5000); // 5000ms = 50초
+
     ws.current.onmessage = (event) => {
       console.log("Message from server:", event.data);
       if (event.data === "CARD:PASS") {
-
         // CARD:PASS 메시지가 오면 PaymentComplete 페이지로 이동
         navigate("/paymentComplete");
-        console.log("card pass")
+        console.log("card pass");
       }
     };
 
