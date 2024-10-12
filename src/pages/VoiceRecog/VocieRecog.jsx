@@ -11,7 +11,7 @@ function VoiceRecog() {
     // 10초 후에 BurgerRecom 페이지로 이동
     const timer = setTimeout(() => {
       navigate("/burgerrecom"); // 10초 후 BurgerRecom 페이지로 이동
-    }, 8000); // 10000ms = 10초
+    }, 5000); // 5000ms = 50초
 
     // 컴포넌트 언마운트 시 타이머 클리어
     return () => clearTimeout(timer);
